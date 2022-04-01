@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 
-const defaultClassname = "mx-6 cursor-pointer";
+const defaultClassname =
+  "mx-6 cursor-pointer hover:border-b-2 border-white duration-200";
 const variantClassName = `text-2xl py-6 ${defaultClassname}`;
 
 export default function Navbar() {
@@ -13,7 +14,7 @@ export default function Navbar() {
   };
 
   return (
-    <div className=" w-full h-[90px] bg-black">
+    <div className=" w-full h-[90px] bg-[#18181B] ">
       <div className=" max-w-[1240px] mx-auto px-4 flex justify-between items-center h-full">
         <div className="">
           <h1 className="text-white text-2xl">JLM</h1>
@@ -62,7 +63,7 @@ export default function Navbar() {
               : "absolute left-[-100%] md:hidden"
           }
         >
-          <ul className="font-roboto">
+          <ul>
             <Link href="/" title="Accueil">
               <li className={variantClassName}>Accueil</li>
             </Link>
